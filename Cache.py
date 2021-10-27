@@ -19,3 +19,5 @@ class Cache:
         else:
             self.evict(value)
 
+    def rate(self, k):
+        return 1 / (k + 1)
