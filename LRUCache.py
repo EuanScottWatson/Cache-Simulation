@@ -3,10 +3,10 @@ from Cache import Cache
 class LRUCache(Cache):
     def __init__(self, capacity, starting_values=None):
         super().__init__(capacity, starting_values)
+        self.name = "LRU"
 
     def evict(self, value):
         self.cache = [value] + self.cache[:-1]
-        print(self.cache)
 
     def hit(self, value):
         index = self.cache.index(value)
