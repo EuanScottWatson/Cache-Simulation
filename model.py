@@ -34,6 +34,8 @@ def model(m: int, n: int, cache: Cache, T: int):
 
     ax = plt.axes()
     ax.plot(time_points, hit_ratio)
+    plt.xlabel("Time (arbitrary units)")
+    plt.ylabel("Hit-Ratio")
     plt.savefig("graphs/{0}_{1}_{2}_{3}.png".format(m, n, T, cache.name))
     plt.show()
 
