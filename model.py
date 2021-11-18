@@ -69,7 +69,11 @@ def model(n: int, cache: Cache, T: int):
             next_data_collected += rate_of_data_collection
         
         # Print the progress, flushing out the previous print
-        print("%.2f percent complete - %.2f seconds elapsed" % (round(t / T * 100, 3), round(time.time() - start, 3)), end='\r')
+        print("%.2f percent complete - %.2f seconds elapsed\t Current HR: %.4f" % (
+            round(t / T * 100, 3), 
+            round(time.time() - start, 3), 
+            round(cache.hits / (cache.hits + cache.misses), 5)
+        ), end='\r')
         sys.stdout.flush()
     
     print("")
