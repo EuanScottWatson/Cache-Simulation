@@ -1,4 +1,5 @@
 # Cache Modelling Simulation
+A simple cache simulator done as part of my university course to model the hit and miss rate of a cache.
 ## Running the Simulation
 To run the simulation simply install all the required modules using:
 ```
